@@ -1,0 +1,137 @@
+.testimonial-section {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .testimonial-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonial-section h2 span {
+    color: orange;
+  }
+  
+  .testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .testimonial {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    max-width: 300px;
+    text-align: left;
+    flex: 1;
+    min-width: 250px;
+    margin: 1rem;
+  }
+  
+  .testimonial .quote {
+    font-size: 2rem;
+    color: orange;
+    margin-bottom: 0.5rem;
+  }
+  
+  .testimonial .rating span {
+    color: orange;
+    font-size: 1.2rem;
+  }
+  
+  .testimonial p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 1rem 0;
+  }
+  
+  .client-info {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .client-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+  
+  .client-info h4 {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .client-info p {
+    font-size: 0.8rem;
+    color: #888;
+    margin: 0;
+  }
+  
+  .navigation {
+    margin-top: 1rem;
+  }
+  
+  .navigation button {
+    background: none;
+    border: 1px solid orange;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    color: orange;
+    border-radius: 5px;
+  }
+  
+  .navigation button:hover {
+    background: orange;
+    color: white;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .testimonials-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .testimonial {
+      max-width: 90%;
+    }
+  
+    .navigation button {
+      margin: 0.5rem 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .testimonial-section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .testimonial .quote {
+      font-size: 1.5rem;
+    }
+  
+    .testimonial p {
+      font-size: 0.85rem;
+    }
+  
+    .client-info img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .client-info h4 {
+      font-size: 0.9rem;
+    }
+  
+    .client-info p {
+      font-size: 0.75rem;
+    }
+  }
+  

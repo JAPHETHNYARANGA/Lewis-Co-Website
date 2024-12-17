@@ -1,0 +1,41 @@
+/* General layout for homepage */
+// .homepage {
+//   margin-top: 70px; /* To account for the fixed navbar height */
+// }
+
+/* Navigation Bar - making it static (fixed at the top) */
+.navigation-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #111;
+  z-index: 9999; /* Ensures it stays above other content */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Line separation */
+.line {
+  margin-top: 50px;
+}
+
+/* Brands section styling (if needed in the future) */
+.brands {
+  padding: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Adjusting text size for small screens in the text section */
+  .text-section .top-text,
+  .text-section .main-text {
+    font-size: 1.5rem;
+  }
+
+  /* Optionally, adjust navbar padding for mobile screens */
+  .navigation-bar {
+    padding: 0.8rem;
+  }
+}
