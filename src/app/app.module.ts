@@ -13,6 +13,7 @@ import { ColaborationPageComponent } from './components/colaboration-page/colabo
 import { TopSectionComponent } from './components/top-section/top-section.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { BlogComponent } from './components/blog/blog.component';
+import { MarketingInfoComponent } from './marketing-info/marketing-info.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BlogComponent } from './components/blog/blog.component';
     ColaborationPageComponent,
     TopSectionComponent,
     TestimonialsComponent,
-    BlogComponent
+    BlogComponent,
+    MarketingInfoComponent
   ],
   imports: [
     BrowserModule,
