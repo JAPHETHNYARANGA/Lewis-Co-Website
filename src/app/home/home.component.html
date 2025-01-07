@@ -26,7 +26,7 @@
         Explore Services
       </a>
       <a
-        href="#contact"
+        (click)="navigateToContact()"
         class="px-8 py-4 bg-gray-200 text-gray-800 text-lg font-medium rounded-lg shadow hover:bg-gray-300 transition"
       >
         Get in Touch
@@ -64,7 +64,7 @@
             operations with scalable solutions.
           </p>
           <a
-            href="/ex-tech"
+            (click)="navigateToTech()"
             class="mt-6 inline-block text-red-600 font-medium hover:underline"
           >
             Learn More
@@ -88,7 +88,7 @@
             lead generation, and brand development.
           </p>
           <a
-            href="/ex-marketing"
+            (click)="navigateToMarketing()"
             class="mt-6 inline-block text-blue-600 font-medium hover:underline"
           >
             Learn More
@@ -114,7 +114,7 @@
             workload with AI-driven tools.
           </p>
           <a
-            href="/ex-ai-automation"
+            (click)="navigateToAutomation()"
             class="mt-6 inline-block text-green-600 font-medium hover:underline"
           >
             Learn More
