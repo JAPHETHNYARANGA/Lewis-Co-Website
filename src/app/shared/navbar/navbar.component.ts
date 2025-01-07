@@ -7,14 +7,14 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
   sidebarOpen: boolean = false; // Controls the visibility of the mobile menu (sidebar)
   dropdownOpen: boolean = false; // Controls the dropdown menu visibility
 
-   // Inject Router in the constructor
-   constructor(private router: Router) {}
+  // Inject Router in the constructor
+  constructor(private router: Router) {}
 
   // Function to toggle the sidebar (mobile menu)
   toggleSidebar() {
@@ -28,24 +28,32 @@ export class NavbarComponent {
     console.log('Dropdown state:', this.dropdownOpen); // Debugging
   }
 
-  navigateToHome(){
-    this.router.navigate([''])    
+  // Function to close the dropdown after a service item is clicked
+  closeDropdown() {
+    this.dropdownOpen = false;
   }
-  navigateToContact(){
+
+  navigateToHome() {
+    this.router.navigate(['']);
+  }
+
+  navigateToContact() {
     this.router.navigate(['contact']);
   }
-  navigateToTestimonials(){
+
+  navigateToTestimonials() {
     this.router.navigate(['testimonials']);
   }
-  navigateToTech(){
-    this.router.navigate(['tech'])
-  }
-  navigateToMarketing(){
-    this.router.navigate(['marketing'])
-  }
-  navigateToAutomation(){
-    this.router.navigate(['automation'])
+
+  navigateToTech() {
+    this.router.navigate(['tech']);
   }
 
+  navigateToMarketing() {
+    this.router.navigate(['marketing']);
+  }
 
+  navigateToAutomation() {
+    this.router.navigate(['automation']);
+  }
 }
