@@ -3,18 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Lewis-Co-Website": {
+    "elevate-expertise": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss",
-          "standalone": false
-        },
-        "@schematics/angular:directive": {
-          "standalone": false
-        },
-        "@schematics/angular:pipe": {
-          "standalone": false
+          "style": "scss"
         }
       },
       "root": "",
@@ -24,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/lewis-co-website",
+            "outputPath": "dist/elevate-expertise",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -76,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Lewis-Co-Website:build:production"
+              "buildTarget": "elevate-expertise:build:production"
             },
             "development": {
-              "buildTarget": "Lewis-Co-Website:build:development"
+              "buildTarget": "elevate-expertise:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -112,6 +105,6 @@
     }
   },
   "cli": {
-    "analytics": "3dcd35a7-b38a-4b4c-8700-0172df76ecb9"
+    "analytics": "ab8651fe-0bf0-4631-af65-ff876564f2ea"
   }
 }
