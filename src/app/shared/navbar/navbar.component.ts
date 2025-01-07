@@ -19,13 +19,16 @@ export class NavbarComponent {
   // Function to toggle the sidebar (mobile menu)
   toggleSidebar() {
     this.sidebarOpen = !this.sidebarOpen;
-    console.log('Sidebar state:', this.sidebarOpen); // Debugging
+  }
+
+  // Function to close the sidebar (after clicking a menu item)
+  closeSidebar() {
+    this.sidebarOpen = false;
   }
 
   // Function to toggle the dropdown menu
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
-    console.log('Dropdown state:', this.dropdownOpen); // Debugging
   }
 
   // Function to close the dropdown after a service item is clicked
@@ -35,25 +38,31 @@ export class NavbarComponent {
 
   navigateToHome() {
     this.router.navigate(['']);
+    this.closeSidebar();
   }
 
   navigateToContact() {
     this.router.navigate(['contact']);
+    this.closeSidebar();
   }
 
   navigateToTestimonials() {
     this.router.navigate(['testimonials']);
+    this.closeSidebar();
   }
 
   navigateToTech() {
     this.router.navigate(['tech']);
+    this.closeSidebar();
   }
 
   navigateToMarketing() {
     this.router.navigate(['marketing']);
+    this.closeSidebar();
   }
 
   navigateToAutomation() {
     this.router.navigate(['automation']);
+    this.closeSidebar();
   }
 }

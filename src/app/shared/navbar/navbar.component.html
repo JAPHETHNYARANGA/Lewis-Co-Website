@@ -1,7 +1,7 @@
 <nav class="bg-white shadow-md">
     <div class="max-w-screen-xl mx-auto flex justify-between items-center p-4">
       <!-- Logo -->
-      <a (click)="navigateToHome()"  class="text-2xl font-bold">
+      <a (click)="navigateToHome()" class="text-2xl font-bold">
         <span class="text-black">Elevate</span>
         <span class="text-red-600">Xpertise</span>
       </a>
@@ -52,10 +52,10 @@
     <!-- Mobile Sidebar Menu -->
     <ul *ngIf="sidebarOpen" class="flex flex-col md:hidden space-y-2 bg-white p-4 absolute top-14 left-0 w-full shadow-md">
       <li>
-        <a (click)="navigateToHome()"  class="text-black hover:text-red-600">Home</a>
+        <a (click)="navigateToHome()" class="text-black hover:text-red-600" (click)="closeSidebar()">Home</a>
       </li>
       <li>
-        <a  class="text-black hover:text-red-600 flex items-center" (click)="toggleDropdown()">
+        <a class="text-black hover:text-red-600 flex items-center" (click)="toggleDropdown()">
           Services
           <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -64,21 +64,21 @@
         <!-- Dropdown Menu for Mobile -->
         <ul *ngIf="dropdownOpen" class="ml-4 space-y-2">
           <li>
-            <a href="#" (click)="navigateToTech(); closeDropdown()" class="text-black hover:text-red-600">Tech</a>
+            <a (click)="navigateToTech(); closeDropdown(); closeSidebar()" class="text-black hover:text-red-600">Tech</a>
           </li>
           <li>
-            <a href="#" (click)="navigateToMarketing(); closeDropdown()" class="text-black hover:text-red-600">Marketing</a>
+            <a (click)="navigateToMarketing(); closeDropdown(); closeSidebar()" class="text-black hover:text-red-600">Marketing</a>
           </li>
           <li>
-            <a href="#" (click)="navigateToAutomation(); closeDropdown()" class="text-black hover:text-red-600">A.I. Automation</a>
+            <a (click)="navigateToAutomation(); closeDropdown(); closeSidebar()" class="text-black hover:text-red-600">A.I. Automation</a>
           </li>
         </ul>
       </li>
       <li>
-        <a href="#" (click)="navigateToContact()" class="text-black hover:text-red-600">Contact Us</a>
+        <a (click)="navigateToContact(); closeSidebar()" class="text-black hover:text-red-600">Contact Us</a>
       </li>
       <li>
-        <a href="#" (click)="navigateToTestimonials()" class="text-black hover:text-red-600">Testimonials</a>
+        <a (click)="navigateToTestimonials(); closeSidebar()" class="text-black hover:text-red-600">Testimonials</a>
       </li>
     </ul>
   </nav>
