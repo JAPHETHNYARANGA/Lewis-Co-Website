@@ -31,5 +31,9 @@ export class HomeComponent {
     this.router.navigate(['automation'])
     window.scrollTo(0, 0); // Scroll to the top of the page
   }
+  navigateToTestimonials(){
+    this.router.navigate(['testimonials']);
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }
 
 }
