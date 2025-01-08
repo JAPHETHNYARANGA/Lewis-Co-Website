@@ -17,15 +17,19 @@ export class HomeComponent {
 
   navigateToContact(){
     this.router.navigate(['contact']);
+    window.scrollTo(0, 0); // Scroll to the top of the page
   }
   navigateToTech(){
     this.router.navigate(['tech'])
+    window.scrollTo(0, 0); // Scroll to the top of the page
   }
   navigateToMarketing(){
     this.router.navigate(['marketing'])
+    window.scrollTo(0, 0); // Scroll to the top of the page
   }
   navigateToAutomation(){
     this.router.navigate(['automation'])
+    window.scrollTo(0, 0); // Scroll to the top of the page
   }
 
 }

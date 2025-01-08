@@ -14,6 +14,67 @@
       <!-- Main Content Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
         <!-- Left Column: Contact Information -->
+        <div>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+            Contact Form
+          </h2>
+          <form class="space-y-4">
+            <div>
+              <label for="fullName" class="block text-gray-700">Full Name</label>
+              <input
+                id="fullName"
+                type="text"
+                class="w-full p-3 border border-gray-300 rounded-lg"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-gray-700">Email</label>
+              <input
+                id="email"
+                type="email"
+                class="w-full p-3 border border-gray-300 rounded-lg"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div>
+              <label for="service" class="block text-gray-700">
+                Select a Service
+              </label>
+              <select
+                id="service"
+                class="w-full p-3 border border-gray-300 rounded-lg"
+              >
+                <option>General Inquiry</option>
+                <option>EX Tech</option>
+                <option>EX Marketing</option>
+                <option>EX AI Automation</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="block text-gray-700">Message</label>
+              <textarea
+                id="message"
+                rows="4"
+                class="w-full p-3 border border-gray-300 rounded-lg"
+                placeholder="Write your message here..."
+                required
+              ></textarea>
+            </div>
+            <div>
+              <button
+                type="submit"
+                class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Right Column: Contact Form -->
+         
         <div class="space-y-8">
           <div>
             <h2 class="text-2xl font-semibold text-gray-800 mb-4">
@@ -78,66 +139,8 @@
           </div>
         </div>
   
-        <!-- Right Column: Contact Form -->
-        <div>
-          <h2 class="text-2xl font-semibold text-gray-800 mb-6">
-            Contact Form
-          </h2>
-          <form class="space-y-4">
-            <div>
-              <label for="fullName" class="block text-gray-700">Full Name</label>
-              <input
-                id="fullName"
-                type="text"
-                class="w-full p-3 border border-gray-300 rounded-lg"
-                placeholder="Your Name"
-                required
-              />
-            </div>
-            <div>
-              <label for="email" class="block text-gray-700">Email</label>
-              <input
-                id="email"
-                type="email"
-                class="w-full p-3 border border-gray-300 rounded-lg"
-                placeholder="Your Email"
-                required
-              />
-            </div>
-            <div>
-              <label for="service" class="block text-gray-700">
-                Select a Service
-              </label>
-              <select
-                id="service"
-                class="w-full p-3 border border-gray-300 rounded-lg"
-              >
-                <option>General Inquiry</option>
-                <option>EX Tech</option>
-                <option>EX Marketing</option>
-                <option>EX AI Automation</option>
-              </select>
-            </div>
-            <div>
-              <label for="message" class="block text-gray-700">Message</label>
-              <textarea
-                id="message"
-                rows="4"
-                class="w-full p-3 border border-gray-300 rounded-lg"
-                placeholder="Write your message here..."
-                required
-              ></textarea>
-            </div>
-            <div>
-              <button
-                type="submit"
-                class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
-              >
-                Send Message
-              </button>
-            </div>
-          </form>
-        </div>
+        
+        
       </div>
     </div>
   </div>

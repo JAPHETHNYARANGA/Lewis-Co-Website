@@ -14,6 +14,7 @@ export class TechPageComponent {
 
 
   navigateToContact(){
-    this.router.navigate(['contact'])
+    this.router.navigate(['contact']);
+    window.scrollTo(0, 0); 
   }
 }

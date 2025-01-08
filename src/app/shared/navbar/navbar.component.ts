@@ -36,33 +36,45 @@ export class NavbarComponent {
     this.dropdownOpen = false;
   }
 
+  // Scroll to top of the page and navigate to Home
   navigateToHome() {
     this.router.navigate(['']);
     this.closeSidebar();
+    window.scrollTo(0, 0); // Scroll to the top of the page
   }
 
+  // Scroll to top of the page and navigate to Contact
   navigateToContact() {
     this.router.navigate(['contact']);
     this.closeSidebar();
+    window.scrollTo(0, 0); // Scroll to the top of the page
   }
 
+  // Scroll to top of the page and navigate to Testimonials
   navigateToTestimonials() {
     this.router.navigate(['testimonials']);
     this.closeSidebar();
+    window.scrollTo(0, 0); // Scroll to the top of the page
   }
 
+  // Scroll to top of the page and navigate to Tech page
   navigateToTech() {
     this.router.navigate(['tech']);
     this.closeSidebar();
+    window.scrollTo(0, 0); // Scroll to the top of the page
   }
 
+  // Scroll to top of the page and navigate to Marketing page
   navigateToMarketing() {
     this.router.navigate(['marketing']);
     this.closeSidebar();
+    window.scrollTo(0, 0); // Scroll to the top of the page
   }
 
+  // Scroll to top of the page and navigate to Automation page
   navigateToAutomation() {
     this.router.navigate(['automation']);
     this.closeSidebar();
+    window.scrollTo(0, 0); // Scroll to the top of the page
   }
 }
