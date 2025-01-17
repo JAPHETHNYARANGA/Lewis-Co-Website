@@ -1,0 +1,45 @@
+/* Fade-in animation for the logo */
+@keyframes fadeInLogo {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Slide-in animation for the navbar items */
+  @keyframes slideInNavbar {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  
+  /* Fade-in and slide-down for the dropdown menu */
+  @keyframes dropdownSlideIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Slide-in animation for the mobile hamburger menu */
+  @keyframes slideInMobileMenu {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  
+  /* Apply animation on the logo */
+  .nav-logo {
+    animation: fadeInLogo 1s ease-out;
+  }
+  
+  /* Apply animation on the navbar items */
+  .navbar-items {
+    animation: slideInNavbar 1s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+  
+  /* Apply animation on the dropdown menu */
+  .dropdown-menu {
+    animation: dropdownSlideIn 0.5s ease-out forwards;
+  }
+  
+  /* Apply slide-in effect for mobile menu */
+  .mobile-menu {
+    animation: slideInMobileMenu 0.5s ease-out forwards;
+  }
+  

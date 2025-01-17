@@ -1,85 +1,84 @@
 <nav class="bg-white shadow-md">
-    <div class="max-w-screen-xl mx-auto flex justify-between items-center p-4">
-      <!-- Logo -->
-      <a (click)="navigateToHome()" class="text-2xl font-bold">
-        <span class="text-black">Elevate</span>
-        <span class="text-red-600">Xpertise</span>
-      </a>
-  
-      <!-- Desktop Navbar Items -->
-      <ul class="hidden md:flex space-x-8 font-medium">
-        <li>
-          <a (click)="navigateToHome()" class="text-black hover:text-red-600 underline">Home</a>
-        </li>
-        <li class="relative">
-          <a (click)="toggleDropdown()" class="text-black hover:text-red-600 underline flex items-center">
-            Services
-            <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </a>
-          <!-- Dropdown Menu -->
-          <div *ngIf="dropdownOpen" class="absolute bg-white shadow-md rounded mt-2 w-48">
-            <ul class="py-2 text-gray-700">
-              <li>
-                <a (click)="navigateToTech()" class="block px-4 py-2 hover:bg-gray-100 text-black" (click)="closeDropdown()">Tech</a>
-              </li>
-              <li>
-                <a (click)="navigateToMarketing()" class="block px-4 py-2 hover:bg-gray-100 text-black" (click)="closeDropdown()">Marketing</a>
-              </li>
-              <li>
-                <a (click)="navigateToAutomation()" class="block px-4 py-2 hover:bg-gray-100 text-black" (click)="closeDropdown()">A.I. Automation</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a (click)="navigateToContact()" class="text-black hover:text-red-600 underline">Contact Us</a>
-        </li>
-        <li>
-          <a (click)="navigateToTestimonials()" class="text-black hover:text-red-600 underline">Testimonials</a>
-        </li>
-      </ul>
-  
-      <!-- Hamburger Button for Mobile -->
-      <button type="button" class="md:hidden text-black" (click)="toggleSidebar()">
-        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-  
-    <!-- Mobile Sidebar Menu -->
-    <ul *ngIf="sidebarOpen" class="flex flex-col md:hidden space-y-2 bg-white p-4 absolute top-14 left-0 w-full shadow-md">
+  <div class="max-w-screen-xl mx-auto flex justify-between items-center p-4">
+    <!-- Logo with animation -->
+    <a (click)="navigateToHome()" class="text-2xl font-bold nav-logo">
+      <span class="text-black">Elevate</span>
+      <span class="text-red-600">Xpertise</span>
+    </a>
+
+    <!-- Desktop Navbar Items with animation -->
+    <ul class="hidden md:flex space-x-8 font-medium navbar-items">
       <li>
-        <a (click)="navigateToHome()" class="text-black hover:text-red-600" (click)="closeSidebar()">Home</a>
+        <a (click)="navigateToHome()" class="text-black hover:text-red-600 no-underline">Home</a>
       </li>
-      <li>
-        <a class="text-black hover:text-red-600 flex items-center" (click)="toggleDropdown()">
+      <li class="relative">
+        <a (click)="toggleDropdown()" class="text-black hover:text-red-600 no-underline flex items-center">
           Services
           <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </a>
-        <!-- Dropdown Menu for Mobile -->
-        <ul *ngIf="dropdownOpen" class="ml-4 space-y-2">
-          <li>
-            <a (click)="navigateToTech(); closeDropdown(); closeSidebar()" class="text-black hover:text-red-600">Tech</a>
-          </li>
-          <li>
-            <a (click)="navigateToMarketing(); closeDropdown(); closeSidebar()" class="text-black hover:text-red-600">Marketing</a>
-          </li>
-          <li>
-            <a (click)="navigateToAutomation(); closeDropdown(); closeSidebar()" class="text-black hover:text-red-600">A.I. Automation</a>
-          </li>
-        </ul>
+        <!-- Dropdown Menu with animation -->
+        <div *ngIf="dropdownOpen" class="absolute bg-white shadow-md rounded mt-2 w-48 dropdown-menu">
+          <ul class="py-2 text-gray-700">
+            <li>
+              <a (click)="navigateToTech()" class="block px-4 py-2 hover:bg-gray-100 text-black" (click)="closeDropdown()">Tech</a>
+            </li>
+            <li>
+              <a (click)="navigateToMarketing()" class="block px-4 py-2 hover:bg-gray-100 text-black" (click)="closeDropdown()">Marketing</a>
+            </li>
+            <li>
+              <a (click)="navigateToAutomation()" class="block px-4 py-2 hover:bg-gray-100 text-black" (click)="closeDropdown()">A.I. Automation</a>
+            </li>
+          </ul>
+        </div>
       </li>
       <li>
-        <a (click)="navigateToContact(); closeSidebar()" class="text-black hover:text-red-600">Contact Us</a>
+        <a (click)="navigateToContact()" class="text-black hover:text-red-600 no-underline">Contact Us</a>
       </li>
       <li>
-        <a (click)="navigateToTestimonials(); closeSidebar()" class="text-black hover:text-red-600">Testimonials</a>
+        <a (click)="navigateToTestimonials()" class="text-black hover:text-red-600 no-underline">Testimonials</a>
       </li>
     </ul>
-  </nav>
-  
+
+    <!-- Hamburger Button for Mobile -->
+    <button type="button" class="md:hidden text-black" (click)="toggleSidebar()" [class.mobile-menu]="sidebarOpen">
+      <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Sidebar Menu -->
+  <ul *ngIf="sidebarOpen" class="flex flex-col md:hidden space-y-2 bg-white p-4 absolute top-14 left-0 w-full shadow-md">
+    <li>
+      <a (click)="navigateToHome()" class="text-black hover:text-red-600 no-underline" (click)="closeSidebar()">Home</a>
+    </li>
+    <li>
+      <a class="text-black hover:text-red-600 flex items-center no-underline" (click)="toggleDropdown()">
+        Services
+        <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </a>
+      <!-- Dropdown Menu for Mobile with animation -->
+      <ul *ngIf="dropdownOpen" class="ml-4 space-y-2 dropdown-menu">
+        <li>
+          <a (click)="navigateToTech(); closeDropdown(); closeSidebar()" class="text-black hover:text-red-600">Tech</a>
+        </li>
+        <li>
+          <a (click)="navigateToMarketing(); closeDropdown(); closeSidebar()" class="text-black hover:text-red-600">Marketing</a>
+        </li>
+        <li>
+          <a (click)="navigateToAutomation(); closeDropdown(); closeSidebar()" class="text-black hover:text-red-600">A.I. Automation</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a (click)="navigateToContact(); closeSidebar()" class="text-black hover:text-red-600 no-underline">Contact Us</a>
+    </li>
+    <li>
+      <a (click)="navigateToTestimonials(); closeSidebar()" class="text-black hover:text-red-600 no-underline">Testimonials</a>
+    </li>
+  </ul>
+</nav>
