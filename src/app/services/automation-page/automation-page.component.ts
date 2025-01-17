@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-automation-page',
@@ -13,6 +14,9 @@ export class AutomationPageComponent {
 
   constructor(private router:Router){}
 
+  ngOnInit() {
+    AOS.init();
+  }
 
   navigateToContact(){
     this.router.navigate(['contact']);

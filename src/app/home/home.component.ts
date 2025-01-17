@@ -3,6 +3,7 @@ import { NavbarComponent } from "../shared/navbar/navbar.component";
 import { MainCardsComponent } from "../shared/main-cards/main-cards.component";
 import { FooterComponent } from "../shared/footer/footer.component";
 import { Router } from '@angular/router';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,10 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
   constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    AOS.init();
+  }
 
 
   navigateToContact(){

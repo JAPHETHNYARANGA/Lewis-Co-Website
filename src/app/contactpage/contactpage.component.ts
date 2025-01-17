@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from "../shared/navbar/navbar.component";
 import { FooterComponent } from "../shared/footer/footer.component";
+import AOS from 'aos';
 
 @Component({
   selector: 'app-contactpage',
@@ -11,4 +12,7 @@ import { FooterComponent } from "../shared/footer/footer.component";
 })
 export class ContactpageComponent {
 
+  ngOnInit(): void {
+    AOS.init(); // Initialize AOS animations
+  }
 }

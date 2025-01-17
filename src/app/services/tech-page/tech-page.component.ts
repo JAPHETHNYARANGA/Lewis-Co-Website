@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-tech-page',
@@ -11,6 +12,10 @@ import { Router } from '@angular/router';
 export class TechPageComponent {
 
   constructor(private router:Router){}
+
+  ngOnInit() {
+    AOS.init();
+  }
 
 
   navigateToContact(){

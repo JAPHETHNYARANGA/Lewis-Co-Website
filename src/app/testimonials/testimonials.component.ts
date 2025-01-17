@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FooterComponent } from "../shared/footer/footer.component";
 import { NavbarComponent } from "../shared/navbar/navbar.component";
 import { Router } from '@angular/router';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-testimonials',
@@ -13,6 +14,10 @@ import { Router } from '@angular/router';
 export class TestimonialsComponent {
 
   constructor (private router:Router) {}
+
+  ngOnInit(): void {
+    AOS.init(); // Initialize AOS animations
+  }
 
    // Scroll to top of the page and navigate to Contact
    navigateToContact() {
