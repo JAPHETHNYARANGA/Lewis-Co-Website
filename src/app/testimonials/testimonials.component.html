@@ -77,35 +77,15 @@
         Watch Their Stories
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="relative pb-56 h-0 overflow-hidden rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="2000">
-          <iframe
+        <!-- Dynamically render videos -->
+        <div *ngFor="let video of videos" class="relative pb-56 h-0 overflow-hidden rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="2000">
+          <video
             class="absolute top-0 left-0 w-full h-full"
-            src="https://www.youtube.com/embed/8LSt8_11wbQ"
-            title="Testimonial Video 1"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div class="relative pb-56 h-0 overflow-hidden rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="2200">
-          <iframe
-            class="absolute top-0 left-0 w-full h-full"
-            src="https://www.youtube.com/embed/ppawFI1u6Po"
-            title="Testimonial Video 2"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div class="relative pb-56 h-0 overflow-hidden rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="2400">
-          <iframe
-            class="absolute top-0 left-0 w-full h-full"
-            src="https://www.youtube.com/embed/Jw7s42Op2ao"
-            title="Testimonial Video 3"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+            controls
+          >
+            <source [src]="video.url" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>
