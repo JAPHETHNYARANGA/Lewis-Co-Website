@@ -1,3 +1,6 @@
+*{
+  cursor: pointer;
+}
 /* Fade-in animation for the logo */
 @keyframes fadeInLogo {
     0% { opacity: 0; transform: translateY(-10px); }
@@ -42,4 +45,5 @@
   .mobile-menu {
     animation: slideInMobileMenu 0.5s ease-out forwards;
   }
+  
   

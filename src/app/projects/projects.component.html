@@ -1,0 +1,40 @@
+<div class="projects-section bg-gray-100 py-16" id="projects" data-aos="fade-up" data-aos-duration="1000">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+      <!-- Section Heading -->
+      <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800" data-aos="fade-up" data-aos-duration="1200">
+        Our Projects
+      </h2>
+      <p class="mt-4 text-lg text-gray-600" data-aos="fade-up" data-aos-duration="1400">
+        Take a look at some of our most impactful projects that have helped businesses elevate their success.
+      </p>
+  
+      <!-- Projects Container -->
+      <div class="mt-12 grid gap-8 md:grid-cols-3">
+        <!-- Dynamic Project Cards -->
+        <div *ngFor="let project of projects" class="project bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:scale-105" data-aos="fade-up" data-aos-duration="1000">
+          <img
+            [src]="project.image"
+            [alt]="project.title"
+            class="mx-auto w-full h-56 object-cover rounded-lg"
+          />
+          <h3 class="mt-6 text-xl font-bold text-gray-800" data-aos="fade-up" data-aos-duration="1200">
+            {{ project.title }}
+          </h3>
+          <p class="mt-4 text-gray-600" data-aos="fade-up" data-aos-duration="1400">
+            {{ project.description }}
+          </p>
+          <a
+            [href]="project.link"
+            class="mt-6 inline-block text-red-600 font-medium hover:underline"
+            data-aos="fade-up"
+            data-aos-duration="1600"
+          >
+            View Project
+          </a>
+        </div>
+      </div>
+  
+      
+    </div>
+  </div>
+  

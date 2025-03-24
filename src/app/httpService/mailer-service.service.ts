@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class MailerService {
 
-  private apiUrl = 'http://127.0.0.1:8000/api/mail';  // API endpoint for the Laravel backend
+  private apiUrl = 'https://api.elevatexpertise.com/api/mail';  // API endpoint for the Laravel backend
 
   constructor(private http: HttpClient) { }
 
