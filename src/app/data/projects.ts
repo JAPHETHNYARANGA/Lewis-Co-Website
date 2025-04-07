@@ -25,7 +25,19 @@ export interface Project {
       image: '/assets/dashboard.svg',
       link: '', // Replace with your live project URL
     },
-    
-    // Add more projects as necessary
+    {
+      title: 'Prudence Showroom',
+      description: 'Prudence Showroom is a dynamic platform designed for buying and selling cars. It connects car buyers and sellers in a seamless and efficient marketplace. Whether you are looking to purchase a new or used vehicle, or you want to sell your car, Prudence Showroom offers a user-friendly interface, detailed listings, and secure transaction options. With a wide range of vehicles available, Prudence Showroom is your one-stop destination for all your car buying and selling needs.',
+      image: '/assets/prudence.svg',
+      link: 'https://prudenceshowroom.com/', // Replace with your live project URL
+    },
+    {
+      title: 'Pceamakupaparish',
+      description: "Welcome to P.C.E.A Makupa Parish, a place where faith and community come together to create a profound spiritual journey. We have been a steadfast presence in the lives of our congregation, nurturing and fostering spiritual growth. As we continue to evolve and adapt to the changing world, our commitment to spreading the message of love and hope remains unwavering. Join us in our journey of faith and be part of a community that makes a positive impact in the world. Learn about our services, leadership, and find opportunities to engage with us both in person and virtually.",
+      image: '/assets/pceamakupaparish.svg',
+      link: 'https://pceamakupaparish.org/', // Replace with your live project URL
+    } 
+        
+ 
   ];
   
