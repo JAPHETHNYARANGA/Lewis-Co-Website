@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser, CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+
 import { NavbarComponent } from "../shared/navbar/navbar.component";
 import { MainCardsComponent } from "../shared/main-cards/main-cards.component";
 import { FooterComponent } from "../shared/footer/footer.component";
-import { Router } from '@angular/router';
-import AOS from 'aos';
 import { projects } from '../data/projects';
-import { CommonModule } from '@angular/common';
-
 
 @Component({
   selector: 'app-home',
@@ -19,42 +18,51 @@ export class HomeComponent {
 
   projects = projects.slice(0, 3);
   videos: any[] = [
-    { url: 'assets/videos/vid1.mp4' }, // Replace with actual video file names and paths
+    { url: 'assets/videos/vid1.mp4' },
     { url: 'assets/videos/vid2.mp4' },
     { url: 'assets/videos/vid3.mp4' }
   ];
-  
-  constructor(private router: Router) {}
+
+  constructor(
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   ngOnInit(): void {
-    AOS.init();
+    if (isPlatformBrowser(this.platformId)) {
+      import('aos').then(AOS => {
+        AOS.default.init(); 
+      });
+    }
   }
 
-  
-
-  navigateToContact(){
+  navigateToContact() {
     this.router.navigate(['contact']);
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  }
-  navigateToTech(){
-    this.router.navigate(['tech'])
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  }
-  navigateToMarketing(){
-    this.router.navigate(['marketing'])
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  }
-  navigateToAutomation(){
-    this.router.navigate(['automation'])
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  }
-  navigateToTestimonials(){
-    this.router.navigate(['testimonials']);
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  }
-  navigateToProjects(){
-    this.router.navigate(['projects']);
-    window.scrollTo(0, 0);
+    if (isPlatformBrowser(this.platformId)) window.scrollTo(0, 0);
   }
 
+  navigateToTech() {
+    this.router.navigate(['tech']);
+    if (isPlatformBrowser(this.platformId)) window.scrollTo(0, 0);
+  }
+
+  navigateToMarketing() {
+    this.router.navigate(['marketing']);
+    if (isPlatformBrowser(this.platformId)) window.scrollTo(0, 0);
+  }
+
+  navigateToAutomation() {
+    this.router.navigate(['automation']);
+    if (isPlatformBrowser(this.platformId)) window.scrollTo(0, 0);
+  }
+
+  navigateToTestimonials() {
+    this.router.navigate(['testimonials']);
+    if (isPlatformBrowser(this.platformId)) window.scrollTo(0, 0);
+  }
+
+  navigateToProjects() {
+    this.router.navigate(['projects']);
+    if (isPlatformBrowser(this.platformId)) window.scrollTo(0, 0);
+  }
 }

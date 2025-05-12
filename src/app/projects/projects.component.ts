@@ -1,8 +1,8 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { projects } from '../data/projects';
 import { Router } from '@angular/router';
-import AOS from 'aos';
+
 
 @Component({
   selector: 'app-projects',
@@ -14,9 +14,13 @@ import AOS from 'aos';
 export class ProjectsComponent {
   projects = projects; 
     
-    constructor(private router: Router) {}
+    constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object) {}
   
     ngOnInit(): void {
-      AOS.init();
+      if (isPlatformBrowser(this.platformId)) {
+        import('aos').then(AOS => {
+          AOS.default.init(); 
+        });
+      }
     }
 }

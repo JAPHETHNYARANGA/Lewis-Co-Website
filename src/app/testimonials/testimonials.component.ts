@@ -1,6 +1,5 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common'; // Import isPlatformBrowser
-import AOS from 'aos';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
@@ -21,17 +20,14 @@ export class TestimonialsComponent implements OnInit {
     { url: 'assets/videos/cityRealty.mp4'}
   ];
 
-  constructor(
-    private router: Router,
-    @Inject(PLATFORM_ID) private platformId: Object // Inject PLATFORM_ID
-  ) {}
+  constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) { // Check if running in the browser
-      AOS.init(); // Initialize AOS only in the browser
+    if (isPlatformBrowser(this.platformId)) {
+      import('aos').then(AOS => {
+        AOS.default.init(); 
+      });
     }
-    // No need to fetch videos now since they are hardcoded
-    // this.fetchVideos(); // You can leave this method for later if you plan to re-enable API usage
   }
 
   // Commented out the fetchVideos method as we're not using the API now

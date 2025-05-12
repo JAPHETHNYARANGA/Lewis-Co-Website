@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import AOS from 'aos';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+
 
 @Component({
   selector: 'app-footer',
@@ -10,7 +11,14 @@ import AOS from 'aos';
 })
 export class FooterComponent {
 
-  ngOnInit(): void {
-    AOS.init();
+   constructor( @Inject(PLATFORM_ID) private platformId: Object) {}
+
+   ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      import('aos').then(AOS => {
+        AOS.default.init(); 
+      });
+    }
   }
+  
 }

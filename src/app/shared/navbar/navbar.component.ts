@@ -14,7 +14,7 @@ export class NavbarComponent {
   dropdownOpen: boolean = false; // Controls the dropdown menu visibility
 
   // Inject Router in the constructor
-  constructor(private router: Router) {}
+  constructor(private router: Router, ) {}
 
   // Function to toggle the sidebar (mobile menu)
   toggleSidebar() {
@@ -74,6 +74,11 @@ export class NavbarComponent {
   // Scroll to top of the page and navigate to Automation page
   navigateToAutomation() {
     this.router.navigate(['automation']);
+    this.closeSidebar();
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }
+  navigateToProjects() {
+    this.router.navigate(['projects']);
     this.closeSidebar();
     window.scrollTo(0, 0); // Scroll to the top of the page
   }

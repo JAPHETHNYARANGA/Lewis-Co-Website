@@ -34,6 +34,9 @@
         </div>
       </li>
       <li>
+        <a (click)="navigateToProjects(); closeSidebar()" class="text-black hover:text-red-600 no-underline">Projects</a>
+      </li>
+      <li>
         <a (click)="navigateToContact()" class="text-black hover:text-red-600 no-underline">Contact Us</a>
       </li>
       <li>
@@ -73,6 +76,9 @@
           <a (click)="navigateToAutomation(); closeDropdown(); closeSidebar()" class="text-black hover:text-red-600">A.I. Automation</a>
         </li>
       </ul>
+    </li>
+    <li>
+      <a (click)="navigateToProjects(); closeSidebar()" class="text-black hover:text-red-600 no-underline">Projects</a>
     </li>
     <li>
       <a (click)="navigateToContact(); closeSidebar()" class="text-black hover:text-red-600 no-underline">Contact Us</a>
